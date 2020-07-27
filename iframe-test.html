@@ -15,10 +15,11 @@
 		$.receiveMessage(function(e){
 
 			var h = Number( e.data.replace( /.*if_height=(\d+)(?:&|$)/, '$1' ) );
+			console.log(h);
 
 			if (!isNaN( h ) && h > 0 && h !== if_height) {
 				/* Height has changed, update the iframe */
-				alert(h + "test");
+				
 				if_height = h;
 				iframe.height(h);
 			}

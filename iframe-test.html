@@ -15,6 +15,7 @@
 
 			if (!isNaN( h ) && h > 0 && h !== if_height) {
 				/* Height has changed, update the iframe */
+				alert(h + "test");
 				if_height = h;
 				iframe.height(h);
 			}
@@ -26,7 +27,7 @@
 	<body>
 		<div id="umantis_iframe">
 			<!-- Replace the url in the src-attribute with the url that points to the BM application that you like to test -->
-			<iframe src="https://recruitingapp-1000.develop.umantis.com/Jobs/1" width="980" height="500" frameborder="0" scrolling="yes"></iframe>
+			<iframe src="https://recruitingapp-1000.develop.umantis.com/Jobs/1" width="980" frameborder="0" scrolling="yes"></iframe>
 		</div>
 	</body>
 </html>

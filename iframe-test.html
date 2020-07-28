@@ -15,7 +15,7 @@ console.log("test2");
 		$.receiveMessage(function(e){
 console.log(e.data +"data");
 			var h = e.data.replace( /.*if_height=(\d+)(?:&|$)/, "$1" );
-			var b = Math.round(h);
+			var b = parseFloat(h);
 			console.log("test 3" + b);
 
 			if (!isNaN( h ) && h > 0 && h !== if_height) {

@@ -15,7 +15,7 @@ console.log("test2");
 		$.receiveMessage(function(e){
 console.log(e.data +"data");
 			var h = parseInt(e.data.replace( /.*if_height=(\d+)(?:&|$)/, "$1" ));
-			console.log("test");
+			console.log("test" + h);
 
 			if (!isNaN( h ) && h > 0 && h !== if_height) {
 				/* Height has changed, update the iframe */

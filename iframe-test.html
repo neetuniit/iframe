@@ -15,7 +15,6 @@ console.log("test2");
 		$.receiveMessage(function(e){
 console.log(e.data +"data");
 			var h = Number( e.data.replace( /.*if_height=(\d+)(?:&|$)/, $1 ) );
-			console.log($1);
 			console.log("test");
 
 			if (!isNaN( h ) && h > 0 && h !== if_height) {

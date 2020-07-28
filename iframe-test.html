@@ -16,11 +16,10 @@ console.log("test2");
 console.log(e.data +"data");
 			//var h = e.data.replace(/[^0-9]/g,'');
 			var h = Number(e.data.replace(/[^0-9\.]+/g,""));
-			//var h1 = e.data.replace( /.*if_height=(\d+)(?:&|$)/, "$1" );
-			var b = parseFloat(h);
-			console.log("test sssssss" + b);
+			
+			console.log("test sssssss = "+if_height );
 
-			console.log("test hh" +  h);
+			console.log("test hh = " +  h);
 			if (h > 0 && h !== if_height) {
 				console.log("aaaaa");
 				/* Height has changed, update the iframe */

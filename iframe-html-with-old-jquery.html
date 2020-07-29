@@ -12,7 +12,7 @@
 		iframe = $( '<iframe src="' + src + '" name="' + document.location.href + '" width="980" height="500" frameborder="0" scrolling="no"><\/iframe>' ).appendTo( '#umantis_iframe' );
 
 		$.receiveMessage(function(e){
-
+console.log(e.data.replace + " " + "datareceoved");
 			//var h = Number( e.data.replace( /.*if_height=(\d+)(?:&|$)/, '$1' ) );
 			var h = Number(e.data.replace(/[^0-9\.]+/g,""));
 

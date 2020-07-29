@@ -13,7 +13,8 @@
 
 		$.receiveMessage(function(e){
 
-			var h = Number( e.data.replace( /.*if_height=(\d+)(?:&|$)/, '$1' ) );
+			//var h = Number( e.data.replace( /.*if_height=(\d+)(?:&|$)/, '$1' ) );
+			var h = Number(e.data.replace(/[^0-9\.]+/g,""));
 
 			if (!isNaN( h ) && h > 0 && h !== if_height) {
 				/* Height has changed, update the iframe */

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Does SameSite=none on cookies effect Iframe Integrations?</title>
+		<meta charset="UTF-8">
+		<script type="text/javascript" src="jquery_2.4.js"></script>
+		<script type="text/javascript" src="jquery-migrate_2.4.js"></script>
+		<script type="text/javascript" src="jquery.ba-postmessage.js"></script>
+		<script type="text/javascript">
+	$(document).ready(function() {
+		var if_height, src = 'http://recruitingapp-1000.umantis.com/Jobs/1',
+		iframe = $( '<iframe src="' + src + '" name="' + document.location.href + '" width="980" height="500" frameborder="0" scrolling="no"><\/iframe>' ).appendTo( '#umantis_iframe' );
+
+		$.receiveMessage(function(e){
+
+			var h = Number( e.data.replace( /.*if_height=(\d+)(?:&|$)/, '$1' ) );
+
+			if (!isNaN( h ) && h > 0 && h !== if_height) {
+				/* Height has changed, update the iframe */
+				if_height = h;
+				iframe.height(h);
+			}
+		} );
+	});
+</script>
+
+	</head>
+	<body>
+		<div id="umantis_iframe">
+			<!-- Replace the url in the src-attribute with the url that points to the BM application that you like to test -->
+			<iframe src="https://recruitingapp-1000.develop.umantis.com/Jobs/1" width="980" height="500" frameborder="0" scrolling="yes"></iframe>
+		</div>
+	</body>
+</html>

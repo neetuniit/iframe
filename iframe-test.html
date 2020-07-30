@@ -12,10 +12,10 @@
 		var if_height, src = 'https://recruitingapp-1000.develop.umantis.com/Jobs/All',
 		iframe = $( '<iframe src="' + src + '" name="' + document.location.href + '" width="980"  height="500" frameborder="0" scrolling="no"><\/iframe>' ).appendTo( '#umantis_iframe' );
 		$.receiveMessage(function(e){
-			console.log("expression chnaged2");
+			console.log("expression chnagedjquery3");
 			//var h = e.data.replace(/[^0-9]/g,'');
-			var h = Number(e.data.replace(/[^0-9\.]+/g,""));
-			//var h = Number( e.data.replace( /.*if_height=(?:\d+(?:\.\d*)?|\.\d+)(?:&|$)/, '$1' ) );
+			//var h = Number(e.data.replace(/[^0-9\.]+/g,""));
+			var h = Number( e.data.replace( /.*if_height=(?:\d+(?:\.\d*)?|\.\d+)(?:&|$)/, '$1' ) );
 
 
 			if (!isNaN( h ) && h > 0 && h !== if_height) {

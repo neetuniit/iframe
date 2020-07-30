@@ -11,7 +11,8 @@
 		iframe = $( '<iframe src="' + src + '" name="' + document.location.href + '" width="980" height="500" frameborder="0" scrolling="no"><\/iframe>' ).appendTo( '#umantis_iframe' );
 
 		$.receiveMessage(function(e){
-			console.log(e.data + " " + "datareceovedjquery2.4test");
+			console.log(e.data + " " + "datareceovedjquery2.4testint");
+			e.data = "if_height=1483";
 			//var h = Number( e.data.replace( /.*if_height=(?:\d+(?:\.\d*)?|\.\d+)(?:&|$)/, '$1' ) );
 			//var h = Number( e.data.replace( /.*if_height=(\d+)(?:&|$)/, '$1' ) );
 			var h = Number(e.data.replace(/[^0-9\.]+/g,""));

@@ -12,6 +12,7 @@
 		var if_height, src = 'https://recruitingapp-1000.develop.umantis.com/Jobs/All',
 		iframe = $( '<iframe src="' + src + '" name="' + document.location.href + '" width="980"  height="500" frameborder="0" scrolling="no"><\/iframe>' ).appendTo( '#umantis_iframe' );
 		$.receiveMessage(function(e){
+			alert("test");
 			console.log("expression chnagedjquerynewregex" + e.data);
 			
 			//var h = e.data.replace(/[^0-9]/g,'');
